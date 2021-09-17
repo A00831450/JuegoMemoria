@@ -46,7 +46,10 @@ def tap(x, y):
         state['mark'] = None
         uncovered = uncovered+1
         print("Uncovered:", uncovered)
-
+    if uncovered == 32:
+        print("GANASTE!!!!")
+        exit()
+        
 def draw():
     "Draw image and tiles."
     clear()
@@ -66,6 +69,7 @@ def draw():
         up()
         goto(x + 2, y)
         color('black')
+        
         if tiles[mark] <10:
             write(" " + str(tiles[mark]), font=('Arial', 30, 'normal'))
         else:
