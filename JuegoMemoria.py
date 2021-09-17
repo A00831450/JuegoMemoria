@@ -66,7 +66,7 @@ def draw():
         up()
         goto(x + 2, y)
         color('black')
-        if tiles[mark] < 10:
+        if tiles[mark] <10:
             write(" " + str(tiles[mark]), font=('Arial', 30, 'normal'))
         else:
             write(tiles[mark], font=('Arial', 30, 'normal'))
